@@ -14,3 +14,8 @@ The eventual **adsorbate element symbol** in case of a mixing rule applied to ca
 
 Generate a radius file for Zeo++ read by the ```readRadTable``` function of ```networkinfo.cc``` in Zeo++.
 The radius file consists in a two column data file sperated by spaces with the element symbol followed by the radius value. Example in radTable or Hung_2021
+
+# Forcefield
+The force field is defined using the data and python scripts from this repository
+https://github.com/eren125/Forcefield_generation
+
