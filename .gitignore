@@ -1,0 +1,9 @@
+.vscode
+*.out
+*.swp
+*.pdb
+log
+genrad
+KAXQIL_clean.vol
+.*
+!.gitignore
