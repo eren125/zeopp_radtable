@@ -1,8 +1,8 @@
-# Purpose of the code
+# VdW Radii Table for Zeo++
 
 A small python to generate an input for  Zeo++ to change the radii of the zeo++ software. It is based on the distance where the interatomic potential energy is $1.5 k_BT$ which has been tested to be relevant for diffusion purposes in this publication: <https://pubs.acs.org/doi/full/10.1021/acs.jpcc.1c05959>. 
 
-# INPUTs
+## INPUTs
 
 The **temperature** to determine the radius according to the $1.5 k_BT$ energy threshold given by the above-mentioned article.
 
@@ -10,12 +10,21 @@ The interatomic potential is modeled by a Lennard-Jones potential described usin
 
 The eventual **adsorbate element symbol** in case of a mixing rule applied to calculate the LJ parameters.
 
-# Output
+## Output
 
 Generate a radius file for Zeo++ read by the ```readRadTable``` function of ```networkinfo.cc``` in Zeo++.
-The radius file consists in a two column data file sperated by spaces with the element symbol followed by the radius value. Example in radTable or Hung_2021
+The radius file consists in a two column data file sperated by spaces with the element symbol followed by the radius value. Examples in `radTable/` or `Hung_2021/`
 
 # Forcefield
 The force field is defined using the data and python scripts from this repository
 https://github.com/eren125/Forcefield_generation
 
+# RadTable usage
+
+Download the Zeo++ software
+<http://www.zeoplusplus.org/download.html>
+
+Use the binary with the `.rad` file
+```bash
+./network -r RadTable.rad -ha -res output_file.res input_structure.cif
+```
